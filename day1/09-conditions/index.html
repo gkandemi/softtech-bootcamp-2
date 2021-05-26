@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="show = !show">Show / Hide</button>
+
+      <h3 v-if="show">Bu Arkadaş Gözüküyor..</h3>
+      <h1 v-else>Bu arkadaş False olduğunda gözükecek...</h1>
+
+      <br />
+
+      <h3>v-show</h3>
+      <h3 v-show="show">Bu Arkadaş Gözüküyor..</h3>
+      <h1 v-show="!show">Bu arkadaş False olduğunda gözükecek...</h1>
+
+      <br />
+
+      <button @click="counter++">Sayaç {{ counter }}</button>
+
+      <h1 v-if="counter < 0">Counter Negatif</h1>
+      <h2 v-else-if="counter > 0">Counter Pozitif</h2>
+      <h3 v-else>Counter Sıfır</h3>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

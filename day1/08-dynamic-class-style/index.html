@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class | Style</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      .box {
+        background-color: #ccc;
+        width: 200px;
+        height: 200px;
+      }
+
+      .red {
+        background-color: red !important;
+      }
+      .bg-lime-green {
+        background-color: green !important;
+      }
+      .blue {
+        background-color: blue !important;
+      }
+      .dashed-border {
+        border: 2px dashed #000 !important;
+      }
+      .solid-border {
+        border: 2px solid purple !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <button @click="borderClass = !borderClass">Border</button>
+      <button @click="redClass = !redClass">Red</button>
+      <button @click="greenClass = !greenClass">Green</button>
+      <button @click="blueClass = !blueClass">Blue</button>
+      <hr> -->
+      {{ bgClass }}
+      <button @click="borderClass = 'solid-border'">S Border</button>
+      <button @click="borderClass = 'dashed-border'">D Border</button>
+      <button @click="bgClass = 'red'">Red</button>
+      <button @click="bgClass = 'bg-lime-green'">Green</button>
+      <button @click="bgClass = 'blue'">Blue</button>
+      <!-- <div class="box" :class="boxClasses"></div> -->
+      <!-- <input type="text" v-model="counter" /> -->
+      <br />
+      <br />
+      <div class="box" :class="[bgClass, borderClass]"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Events</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        border: 3px dashed #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="showMeAlert('')">Tıkla</button>
+      <div
+        class="box"
+        v-on:mousemove="updateCoords"
+        v-on:click="showMeAlert('Div Üzerine Tıklandı', $event)"
+      >
+        Buraya da tıklanılabilir..
+      </div>
+      <span>{{ coords }} </span>
+
+      <hr />
+
+      <!-- <input type="text" v-on:input="writeMessage" /> -->
+      <input type="text" v-on:keydown.enter="writeMessage" />
+      <pre> {{ todoList }}</pre>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

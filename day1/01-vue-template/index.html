@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Template</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ heading }}</h1>
+      <p>{{ description }}</p>
+      <div>{{ someText }}</div>
+      <strong>{{ someText }}</strong>
+      <a v-bind:href="link.url" v-bind:target="link.target">{{ link.text }}</a>
+      <div v-html="htmlOutput"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

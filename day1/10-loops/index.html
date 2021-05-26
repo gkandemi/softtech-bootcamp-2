@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      .uncompleted-item {
+        background-color : #fc838f40;
+      }
+      .completed-item {
+        background-color :#1987543b;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="row mt-5">
+        <div class="col-4 offset-4 border p-3">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Kurs Adı" v-model="courseName" />
+            <button class="btn btn-outline-primary" type="button" @click="onSave">Ekle</button>
+          </div>
+
+          <ul v-if="courseList.length > 0" class="list-group">
+            <li v-for="courseItem in courseList" :class="{ 'completed-item' : courseItem.completed, 'uncompleted-item' : !courseItem.completed }" class="list-group-item d-flex justify-content-between align-items-center">
+              <span>
+                <div class="form-check">
+                  <input v-model="courseItem.completed" class="form-check-input" type="checkbox" :id="`complete_${courseItem.id}`" />
+                  <label class="form-check-label" :for="`complete_${courseItem.id}`"> {{ courseItem.title }} </label>
+                </div>
+              </span>
+              <button class="btn btn-sm btn-danger" @click="deleteItem(courseItem)">Sil</button>
+            </li>
+          </ul>
+          <div v-else" class="alert alert-warning" role="alert">Henüz eklenmiş bir kursunuz yoktur!</div>
+          <small class="mt-1 d-flex justify-content-end text-secondary">Tamamlanmış <span class="fw-bold mx-1"> {{ completedCount }} </span> adet kursunuz bulunmaktadır..</small>
+          <small class="mt-1 d-flex justify-content-end text-secondary">Tamamlanmamış <span class="fw-bold mx-1"> {{ unCompletedCount }} </span> adet kursunuz bulunmaktadır..</small>
+          <hr>
+          <small class="mt-1 d-flex justify-content-end text-secondary">Toplam <span class="fw-bold mx-1"> {{ courseList.length }} </span> adet kursunuz bulunmaktadır..</small>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

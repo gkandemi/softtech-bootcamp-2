@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="row mt-5">
+        <div class="col-4 offset-4 border p-3">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Kurs Adı" />
+            <button class="btn btn-outline-primary" type="button">Ekle</button>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked />
+                  <label class="form-check-label" for="flexCheckChecked"> Kursun adı burada yer alacaktır.. </label>
+                </div>
+              </span>
+              <button class="btn btn-sm btn-danger">Sil</button>
+            </li>
+          </ul>
+          <small class="mt-1 d-flex justify-content-end text-secondary">5 adet kursunuz bulunmaktadır..</small>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

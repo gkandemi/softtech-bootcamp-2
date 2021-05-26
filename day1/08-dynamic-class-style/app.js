@@ -7,6 +7,7 @@ const app = Vue.createApp({
       redClass: false,
       greenClass: false,
       blueClass: false,
+      bgColor: "#ca4fd5",
 
       bgClass: "",
     };

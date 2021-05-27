@@ -1,0 +1,12 @@
+{
+  "customers": [
+    {
+      "clientName": "kablosuzkedi",
+      "phone": "5077158109",
+      "email": "gokhan@gkandemir.com",
+      "clientType": "customer",
+      "description": "bu bir aciklamadir..",
+      "id": 1
+    }
+  ]
+}

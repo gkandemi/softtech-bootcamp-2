@@ -1,0 +1,20 @@
+{
+  "customers": [
+    {
+      "clientName": "kablosuzkedi",
+      "phone": "5077158109",
+      "email": "gokhan@gkandemir.com",
+      "clientType": "customer",
+      "description": "bu bir aciklamadir..",
+      "id": 1
+    },
+    {
+      "clientName": "Benim güzel müşterim",
+      "phone": "11231342543",
+      "email": "deneme@asda.com",
+      "clientType": "customer",
+      "description": "aaaa",
+      "id": 2
+    }
+  ]
+}

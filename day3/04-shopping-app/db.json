@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "productName": "Product 1",
+      "price": 10,
+      "productCategory": "mobilya",
+      "description": "güzel bir mobilya",
+      "id": 1
+    },
+    {
+      "productName": "Product 2",
+      "price": "100",
+      "productCategory": "elektronik",
+      "description": "güzel bir mobilya degil.",
+      "id": 2
+    },
+    {
+      "productName": "Product 1",
+      "price": 10,
+      "productCategory": "mobilya",
+      "description": "güzel bir mobilya",
+      "id": 3
+    },
+    {
+      "productName": "Product 1",
+      "price": 10,
+      "productCategory": "mobilya",
+      "description": "güzel bir mobilya",
+      "id": 4
+    },
+    {
+      "productName": "Product 11",
+      "price": "46",
+      "productCategory": "mobilya",
+      "description": "güzel bir mobilya",
+      "id": 5
+    },
+    {
+      "productName": "Product 178",
+      "price": "10000",
+      "productCategory": "elektronik",
+      "description": "güzel bir mobilya",
+      "id": 6
+    }
+  ]
+}
